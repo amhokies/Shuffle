@@ -3,7 +3,10 @@
 var api_key = "SRITA3jTGnQB9rbSfKwjXEcqKUkgqO"
 
 document.getElementById("search-button").addEventListener("click", function() {
-    var text = document.getElementById('search-text').value;
+    searchShows(document.getElementById('search-text').value);
+});
+
+void searchShows(searchText) {
     var query = "http://api-public.guidebox.com/v1.43/US/" + api_key +
         "/search/title/" + encodeURIComponent(text) + "/fuzzy";
     var request = new XMLHttpRequest();
@@ -26,4 +29,4 @@ document.getElementById("search-button").addEventListener("click", function() {
     request.send();
 
     document.getElementById("results").innerHTML = query;
-});
+}
