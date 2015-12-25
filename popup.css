@@ -1,0 +1,13 @@
+html {
+    width: 460;
+}
+
+div#search {
+    margin-bottom: 30;
+}
+
+img.result-image
+{
+    float: left;
+    margin: 0 0 10 10;
+}
